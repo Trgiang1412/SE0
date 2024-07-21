@@ -1,0 +1,131 @@
+﻿@using LeanDX.Site.Models
+@using LeanDX.Site.Helper
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-KEP02ZH3LX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-KEP02ZH3LX');
+    </script>
+    <!-- Facebook Pixel Code -->
+    <script>
+        !function (f, b, e, v, n, t, s) {
+            if (f.fbq) return; n = f.fbq = function () {
+                n.callMethod ?
+                    n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+            n.queue = []; t = b.createElement(e); t.async = !0;
+            t.src = v; s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window, document, 'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '711726400595332');
+        fbq('track', 'PageView');
+    </script>
+    <noscript>
+        <img height="1" width="1"
+             src="https://www.facebook.com/tr?id=711726400595332&ev=PageView&noscript=1" />
+    </noscript>
+    <!-- End Facebook Pixel Code -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+          content="@(((SEOModel)ViewBag.SEO)?.Description)">
+    <meta name="author" content="@(((SEOModel)ViewBag.SEO)?.Author)">
+
+    <!-- OG Meta Tags to improve the way the post looks when you share the page on LinkedIn, Facebook, Google+ -->
+    <meta property="og:site_name" content="Công ty dịch vụ môi trường" /> <!-- website name -->
+    <meta property="og:site" content="@(((SEOModel)ViewBag.SEO)?.OgSite)" /> <!-- website link -->
+    <meta property="og:title" content="Dịch vụ thông tắc cống" /> <!-- title shown in the actual shared post -->
+    <meta property="og:description" content="Thử nghiệm" /> <!-- description shown in the actual shared post -->
+    <meta property="og:image" content="~/img/banner2.png" /> <!-- image link, make sure it's jpg -->
+    <meta property="og:type" content="@(((SEOModel)ViewBag.SEO)?.OgType)" />
+    <title>@ViewBag.Title</title>
+    @*<link href="~/Content/css/bootstrap-4.3.1.css" rel="stylesheet" />*@
+    @*<link href="~/Content/css/style.css" rel="stylesheet" />*@
+    @*<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css" integrity="" crossorigin="anonymous">*@
+    <link rel="icon" href="~/img/Capture.PNG" type="image/png" sizes="16x16">
+    <!--google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700%7COpen+Sans:400,600&display=swap"
+          rel="stylesheet">
+
+    <link rel="stylesheet" href="~/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="~/css/magnific-popup.css">
+
+    <link rel="stylesheet" href="~/css/themify-icons.css">
+
+    <link rel="stylesheet" href="~/css/all.min.css">
+
+    <link rel="stylesheet" href="~/css/animate.min.css">
+
+    <link rel="stylesheet" href="~/css/jquery.mb.YTPlayer.min.css">
+
+    <link rel="stylesheet" href="~/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="~/css/owl.theme.default.min.css">
+    <link href="~/Plugins/toastr/toastr.min.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="~/css/style.css">
+
+    <link rel="stylesheet" href="~/css/responsive.css">
+
+    <link rel="stylesheet" href="~/css/f1.css">
+    <link rel="stylesheet" href="~/css/loading.css">
+    <script src="~/js/jquery-3.5.0.min.js" type="text/javascript"></script>
+    <script src="~/js/jquery.js"></script>
+    <!--jQuery-->
+    <script src="~/js/jquery-3.5.0.min.js"></script>
+
+    <script src="~/Scripts/jquery.form.js"></script>
+
+</head>
+
+<body>
+
+
+
+    <!--Popper js-->
+    @Html.Partial("_Header")
+    <div id="bodyContainer">
+        @RenderBody()
+    </div>
+
+    @Html.Partial("_Footer")
+
+    <button class="scroll-top scroll-to-target" data-target="html">
+        <span class="ti-angle-up"></span>
+    </button>
+
+    <script src="~/js/popper.min.js"></script>
+    <!--Bootstrap js-->
+    <script src="~/js/bootstrap.min.js"></script>
+    <!--Magnific popup js-->
+    <script src="~/js/jquery.magnific-popup.min.js"></script>
+    <!--jquery easing js-->
+    <script src="~/js/jquery.easing.min.js"></script>
+    <!--jquery ytplayer js-->
+    <script src="~/js/jquery.mb.YTPlayer.min.js"></script>
+    <!--Isotope filter js-->
+    <script src="~/js/mixitup.min.js"></script>
+    <!--wow js-->
+    <script src="~/js/wow.min.js"></script>
+    <!--owl carousel js-->
+    <script src="~/js/owl.carousel.min.js"></script>
+    <!--countdown js-->
+    <script src="~/js/jquery.countdown.min.js"></script>
+    <!--jquery easypiechart-->
+    <script src="~/js/jquery.easy-pie-chart.js"></script>
+    <!--toastr-->
+    <script src="~/Plugins/toastr/toastr.min.js"></script>
+    <!--custom js-->
+    <script src="~/js/scripts.js"></script>
+    <script src="~/Scripts/custom.js"></script>
+</body>
+</html>
